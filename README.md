@@ -10,6 +10,10 @@ This project demonstrates a **stateless authentication system** using **JWT (JSO
 
 The goal is to understand how authentication works at a low level, including **sessions, cookies, filters, and token-based security**.
 
+![Login](resources/4.png)
+
+![Login](resources/5.png)
+
 ---
 
 ## ⚙️ Tech Stack
