@@ -15,20 +15,29 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
-            // Simulación DB
         UserDAO dao = new UserDAO();
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
 
         if (dao.validate(username, password)) {
 
-                String token = JwtUtil.generateToken(username);
+            String token = JwtUtil.generateToken(username);
 
-                response.getWriter().write(token);
+            String json = "{"
+                    + "\"token\":\"" + token + "\","
+                    + "\"type\":\"Bearer\","
+                    + "\"username\":\"" + username + "\""
+                    + "}";
 
-            } else {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write(json);
+
+        } else {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("{\"error\":\"Credenciales inválidas\"}");
         }
     }
 }
