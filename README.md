@@ -1,6 +1,7 @@
 # 🔐 JWT Authentication Demo (Java Servlets)
 
 ![Login](resources/1.png)
+![Login](resources/2.png)
 
 ## 🚀 Overview
 
