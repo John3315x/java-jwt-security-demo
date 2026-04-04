@@ -1,5 +1,7 @@
 # 🔐 JWT Authentication Demo (Java Servlets)
 
+![Login](resources/1.png)
+
 ## 🚀 Overview
 
 This project demonstrates a **stateless authentication system** using **JWT (JSON Web Tokens)** implemented with **Java Servlets (Java Core)** — without frameworks like Spring.
