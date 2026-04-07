@@ -1,7 +1,9 @@
 # 🔐 JWT Authentication Demo (Java Servlets)
 
+Enter your credentials to obtain your token
 ![Login](resources/1.png)
 
+Your access token
 ![Login](resources/2.png)
 
 ## 🚀 Overview
